@@ -4,7 +4,7 @@
 
 ## Why
 
-AVIF is a new image format with better compression over jpeg.
+[AVIF](https://en.wikipedia.org/wiki/AVIF) is a new image format with better compression over jpeg.
 
 The problem is that the adoption is still getting traction, and many websites still do not recognize `.avif` files as a valid image format to upload, for example.
 
@@ -58,3 +58,7 @@ npx convert-avif-cli ./path/to/my/file.avif
 
 - [`aviftojpg`](https://www.npmjs.com/package/aviftojpg) - CLI to convert AVIF files to JPEG files;
 - [`avif`](https://www.npmjs.com/package/avif) - Command line utility to convert images to AVIF
+
+## License
+
+[MIT](LICENSE)
