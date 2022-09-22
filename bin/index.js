@@ -11,10 +11,12 @@ const cli = meow(
 	Options
 	  --extension, -r  Output file extension. Supported: ${ALLOWED_EXTENSIONS_STRING}
                     default: "jpg"
+	  --output,    -o  Output file. default: The same as input file
 
 	Examples
     $ convert-avif my-image.avif
     $ convert-avif my-image.avif --extension png
+    $ convert-avif my-image.avif --output ./demo/my-image.png
 `,
   {
     importMeta: import.meta,
@@ -24,8 +26,16 @@ const cli = meow(
         alias: "e",
         default: "jpg",
       },
+      output: {
+        type: "string",
+        alias: "o",
+      },
     },
   }
 );
 
-imageParser(cli.input[0], cli.flags.extension);
+imageParser({
+  filePath: cli.input[0],
+  extension: cli.flags.extension,
+  output: cli.flags.output,
+});
