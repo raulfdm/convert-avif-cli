@@ -17,6 +17,7 @@ jobs:
         uses: actions/checkout@v3
 
       - uses: ./.github/actions/ci-setup
+        name: 'Repo setup'
 
       - name: Test
         run: pnpm run test:coverage

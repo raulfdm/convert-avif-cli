@@ -16,6 +16,9 @@ jobs:
           fetch-depth: 0
 
       - uses: ./.github/actions/ci-setup
+        name: 'Repo setup'
+        with:
+          npm_token: ${{secrets.NPM_TOKEN}}
 
       - name: create and publish versions
         uses: changesets/action@v1

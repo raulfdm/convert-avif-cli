@@ -4,7 +4,6 @@ description: 'Project basic setup'
 inputs:
   npm_token:
     required: false
-    default: ${{secrets.NPM_TOKEN}}
     description: 'NPM TOKEN'
 
 runs:
