@@ -1,8 +1,5 @@
 name: 'CI setup'
-
-env:
-  CI: true
-  PNPM_CACHE_FOLDER: .pnpm-store
+description: 'Project basic setup'
 
 runs:
   using: 'composite'
@@ -20,12 +17,16 @@ runs:
 
     - name: install pnpm
       run: npm i pnpm@latest -g
+      shell: bash
 
     - name: Setup npmrc
       run: echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}" > .npmrc
+      shell: bash
 
     - name: setup pnpm config
-      run: pnpm config set store-dir $PNPM_CACHE_FOLDER
+      run: pnpm config set store-dir .pnpm-store
+      shell: bash
 
     - name: install dependencies
       run: pnpm install
+      shell: bash
