@@ -31,3 +31,9 @@ jobs:
 
       - name: Test
         run: pnpm run test:coverage
+
+      - name: Eslint
+        run: pnpm run lint:eslint
+
+      - name: Prettier
+        run: pnpm run lint:prettier

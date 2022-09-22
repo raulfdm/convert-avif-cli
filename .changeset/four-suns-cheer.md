@@ -1,5 +1,5 @@
 ---
-"convert-avif-cli": minor
+'convert-avif-cli': minor
 ---
 
 **feat**: add `--output` option

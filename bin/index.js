@@ -1,7 +1,8 @@
 #!/usr/bin/env node
-import meow from "meow";
-import { imageParser } from "../lib/parser.js";
-import { ALLOWED_EXTENSIONS_STRING } from "../lib/config.js";
+import meow from 'meow';
+
+import { ALLOWED_EXTENSIONS_STRING } from '../lib/config.js';
+import { imageParser } from '../lib/parser.js';
 
 const cli = meow(
   `
@@ -22,13 +23,13 @@ const cli = meow(
     importMeta: import.meta,
     flags: {
       extension: {
-        type: "string",
-        alias: "e",
-        default: "jpg",
+        type: 'string',
+        alias: 'e',
+        default: 'jpg',
       },
       output: {
-        type: "string",
-        alias: "o",
+        type: 'string',
+        alias: 'o',
       },
     },
   }
