@@ -5,18 +5,6 @@
   "publishConfig": {
     "access": "public"
   },
-  "author": {
-    "name": "Raul Melo",
-    "email": "contact@raulmelo.dev",
-    "url": "https://raulmelo.dev"
-  },
-  "license": "MIT",
-  "keywords": [
-    "avif",
-    "avif converter",
-    "image transformation",
-    "cli"
-  ],
   "engines": {
     "node": ">16.0.0"
   },
@@ -27,6 +15,23 @@
   "files": [
     "bin",
     "lib"
+  ],
+  "author": {
+    "name": "Raul Melo",
+    "email": "contact@raulmelo.dev",
+    "url": "https://raulmelo.dev"
+  },
+  "license": "MIT",
+  "homepage": "https://github.com/raulfdm/convert-avif-cli",
+  "repository": "https://github.com/raulfdm/convert-avif-cli",
+  "bugs": {
+    "url": "https://github.com/raulfdm/convert-avif-cli/issues"
+  },
+  "keywords": [
+    "avif",
+    "avif converter",
+    "image transformation",
+    "cli"
   ],
   "scripts": {
     "start": "node bin/index.js",
