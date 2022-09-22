@@ -1,6 +1,12 @@
 name: 'CI setup'
 description: 'Project basic setup'
 
+inputs:
+  npm_token:
+    required: false
+    default: ${{secrets.NPM_TOKEN}}
+    description: 'NPM TOKEN'
+
 runs:
   using: 'composite'
 
@@ -15,7 +21,7 @@ runs:
       shell: bash
 
     - name: Setup npmrc
-      run: echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}" > .npmrc
+      run: echo "//registry.npmjs.org/:_authToken=${{ inputs.npm_token }}" > .npmrc
       shell: bash
 
     - name: setup pnpm config
