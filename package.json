@@ -32,7 +32,7 @@
     "test:watch": "vitest",
     "ci:publish": "changeset publish",
     "lint:eslint": "eslint . --ext .js --ignore-path .gitignore",
-    "lint:prettier": "prettier . --check --ignore-path .gitignore",
+    "lint:prettier": "prettier lib bin --check --ignore-path .gitignore",
     "prepare": "husky install"
   },
   "dependencies": {
