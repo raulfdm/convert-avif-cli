@@ -1,0 +1,42 @@
+{
+  "name": "tinybench",
+  "version": "2.1.5",
+  "files": {
+    "LICENSE": {
+      "checkedAt": 1663866367781,
+      "integrity": "sha512-RdNJZKpQDHt/gkUMiQZJW8Mkway3ZWNGYJv5Wp5gxXRIrcKare5BSZNxwi+gDpEzZtKQsI66VGk1a7HWTUYqaA==",
+      "mode": 420,
+      "size": 1065
+    },
+    "dist/index.cjs": {
+      "checkedAt": 1663866367781,
+      "integrity": "sha512-n+nzDufO60/8c2wXqMKdCx+oboqy0ZyLU9usPtZ1BiOoBuH6YmXO7fRGECndDNf/K/RpvKDJh7sj3ekQ+kkEog==",
+      "mode": 420,
+      "size": 8488
+    },
+    "dist/index.js": {
+      "checkedAt": 1663866367792,
+      "integrity": "sha512-/C48h0TRVrl+MZfrvH7xLPkLU20KvsUHtZaXw5kVuJcBQI/Ug9hZ4br6SVhpoFlVrS/EZyA+EkVFBMWxsYgBQQ==",
+      "mode": 420,
+      "size": 7806
+    },
+    "package.json": {
+      "checkedAt": 1663866367792,
+      "integrity": "sha512-7YSeYXY1a2uwZ6xrSHl0Dn9mrOrqMdSICrwcxGt9vvq7gk7li1BEplSDAtYvP/wLnYwScbCTIptUD12o3wUeDg==",
+      "mode": 420,
+      "size": 768
+    },
+    "README.md": {
+      "checkedAt": 1663866367792,
+      "integrity": "sha512-EavvSfN88qHNvAS461UDAwiLEI3GnoDDEWWEYoc7MFxXekAhaKz6F7ezn/gcgszZkKNZ+RzM9NgfMhhbzD04vw==",
+      "mode": 420,
+      "size": 8912
+    },
+    "dist/index.d.ts": {
+      "checkedAt": 1663866367802,
+      "integrity": "sha512-fkeUVSyl7BEuiTGng7xBI7KxKwgNGyni3/37HkjdSIDGszZJPm4e5PZ10hsgZ617VEN1eMZRZy1BLKvESqre1Q==",
+      "mode": 420,
+      "size": 6856
+    }
+  }
+}
