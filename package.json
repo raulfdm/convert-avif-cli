@@ -1,7 +1,10 @@
 {
   "name": "convert-avif-cli",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Convert any .avif image to any conventional image format.",
+  "publishConfig": {
+    "access": "public"
+  },
   "author": {
     "name": "Raul Melo",
     "email": "contact@raulmelo.dev",
