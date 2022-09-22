@@ -62,7 +62,10 @@ describe("imageParser", () => {
   });
 
   test("exit with 1 and console.error if input file is undefined", async () => {
-    await imageParser(undefined, "jpg");
+    await imageParser({
+      extension: "jpg",
+      filePath: undefined,
+    });
 
     expect(consoleErrorMock).toHaveBeenCalledWith(
       "Input file must be defined.\n"
@@ -74,7 +77,10 @@ describe("imageParser", () => {
     for await (const extension of ["pdf", "txt", "ppm", "v", "fits"]) {
       vi.clearAllMocks();
 
-      await imageParser("my-file.avif", extension);
+      await imageParser({
+        filePath: "my-file.avif",
+        extension,
+      });
 
       expect(consoleErrorMock).toHaveBeenCalledWith(
         `Extension not allowed. Choose one of: "jpg, jpeg, png, webp, gif"\n`
@@ -84,10 +90,13 @@ describe("imageParser", () => {
   });
 
   test("exit with 1 and console.error if input file is not .avif", async () => {
-    for await (const file of ["a.png", "a.jpg", "a.gif"]) {
+    for await (const filePath of ["a.png", "a.jpg", "a.gif"]) {
       vi.clearAllMocks();
 
-      await imageParser(file, "jpg");
+      await imageParser({
+        filePath,
+        extension: "jpg",
+      });
 
       expect(consoleErrorMock).toHaveBeenCalledWith(
         `File must be an ".avif".\n`
@@ -103,7 +112,10 @@ describe("imageParser", () => {
     for await (const expectedExtension of ALLOWED_EXTENSIONS) {
       const expectedOutputFilePath = `./my-file/file.${expectedExtension}`;
 
-      await imageParser(expectedFilePath, expectedExtension);
+      await imageParser({
+        filePath: expectedFilePath,
+        extension: expectedExtension,
+      });
 
       expect(sharpMock).toHaveBeenCalledWith(expectedFilePath);
       expect(sharpToFormatMock).toHaveBeenCalledWith(expectedExtension);
