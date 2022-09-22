@@ -133,3 +133,4 @@ dist
 
 .history/
 .pnpm-store/
+.npmrc
