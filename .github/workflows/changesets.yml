@@ -10,7 +10,7 @@ jobs:
     timeout-minutes: 15
     runs-on: ubuntu-latest
     steps:
-      - uses: './actions/ci-setup.yml'
+      - uses: './actions/ci-setup/action.yml'
 
       - name: create and publish versions
         uses: changesets/action@v1
