@@ -15,22 +15,9 @@ jobs:
     steps:
       - name: checkout code repository
         uses: actions/checkout@v3
-        with:
-          fetch-depth: 0
 
-      - name: setup node.js
-        uses: actions/setup-node@v3
-        with:
-          node-version: 16
-
-      - name: install pnpm
-        run: npm i pnpm@latest -g
-
-      - name: setup pnpm config
-        run: pnpm config set store-dir $PNPM_CACHE_FOLDER
-
-      - name: install dependencies
-        run: pnpm install
+      - uses: ./.github/actions/ci-setup
+        name: 'Repo setup'
 
       - name: Test
         run: pnpm run test:coverage
