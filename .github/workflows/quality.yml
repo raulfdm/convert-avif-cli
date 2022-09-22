@@ -1,6 +1,9 @@
 name: Code Quality
 
-on: push
+on:
+  push:
+    branches-ignore:
+      - 'main'
 
 env:
   CI: true
