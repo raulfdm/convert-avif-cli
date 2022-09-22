@@ -53,7 +53,7 @@ convert-avif file.avif
 This will produce a new file in the same folder, with the same name but with a `.jpg` extension:
 
 ```
-./path/to/my/
+.
 ├── file.avif
 └── file.jpg
 ```
