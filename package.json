@@ -31,6 +31,7 @@
     "test:coverage": "vitest run --coverage",
     "test:watch": "vitest",
     "ci:publish": "changeset publish",
+    "ci:version": "changeset version",
     "lint:eslint": "eslint . --ext .js --ignore-path .gitignore",
     "lint:prettier": "prettier lib bin --check --ignore-path .gitignore",
     "prepare": "husky install"
